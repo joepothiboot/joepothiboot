@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Academic Portfolio Theme - Primary: Deep Blues/Navy/Charcoal */
+    --background: 0 0% 98%;
+    --foreground: 210 40% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 12%;
+
+    /* Deep Navy as primary */
+    --primary: 215 50% 20%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Soft gray as secondary */
+    --secondary: 210 15% 92%;
+    --secondary-foreground: 210 40% 12%;
+
+    /* Muted backgrounds */
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Vibrant cyan accent */
+    --accent: 190 85% 55%;
+    --accent-foreground: 210 40% 12%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 190 85% 55%;
+
+    --radius: 0.25rem;
+
+    /* Additional academic theme colors */
+    --charcoal: 210 30% 18%;
+    --navy: 215 50% 20%;
+    --cyan-accent: 190 85% 55%;
+    --forest-green: 145 60% 35%;
+    --deep-red: 0 60% 40%;
+  }
+
+  .dark {
+    --background: 210 30% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 30% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 30% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 95%;
+    --primary-foreground: 210 30% 10%;
+
+    --secondary: 210 25% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 210 25% 18%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 190 85% 55%;
+    --accent-foreground: 210 30% 10%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 25% 20%;
+    --input: 210 25% 20%;
+    --ring: 190 85% 55%;
+
+    --charcoal: 210 30% 85%;
+    --navy: 215 50% 80%;
+    --cyan-accent: 190 85% 55%;
+    --forest-green: 145 60% 65%;
+    --deep-red: 0 60% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+}
+
+@layer utilities {
+  .container-narrow {
+    @apply max-w-2xl mx-auto px-6;
+  }
+}
