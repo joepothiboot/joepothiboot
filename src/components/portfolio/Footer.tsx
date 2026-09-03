@@ -1,10 +1,8 @@
 export const Footer = () => {
   return (
-    <footer className="py-12">
+    <footer className="site-footer">
       <div className="container-narrow">
-        <p className="text-xs text-muted-foreground">
-          © 2025 Watcharapong Pothiboot
-        </p>
+        <p>© 2026 Watcharapong Pothiboot</p>
       </div>
     </footer>
   );

@@ -2,48 +2,27 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
-    <header className="py-8">
-      <nav className="container-narrow">
-        <div className="flex items-start gap-6 mb-6">
-          <div className="w-16 h-16 rounded-full bg-secondary flex-shrink-0" />
-          <div>
-            <h1 className="text-xl font-semibold mb-1">
-              Watcharapong (Joe) Pothiboot
-            </h1>
-            <p className="text-sm text-muted-foreground">Software Engineer</p>
-          </div>
-        </div>
-        <div className="flex flex-col gap-1 text-sm">
-          <a
-            href="mailto:joe.pothiboot.dev@gmail.com"
-            className="text-foreground hover:text-accent underline"
-          >
-            Email
-          </a>
-          <a
-            href="https://github.com/joepotibutr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground hover:text-accent underline"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/joepotibutr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground hover:text-accent underline"
-          >
-            LinkedIn
-          </a>
-          <Link
-            to="/writing"
-            className="text-foreground hover:text-accent underline"
-          >
-            Writing
-          </Link>
-        </div>
-      </nav>
+    <header className="site-header">
+      <div className="container-narrow">
+        <p className="site-kicker">Personal site / notes from the interface</p>
+        <h1>Watcharapong (Joe) Pothiboot</h1>
+        <p className="site-role">Frontend engineer and thoughtful builder.</p>
+        <p className="site-intro">
+          I build clear, resilient interfaces with React and TypeScript. This is
+          where I write about frontend craft, product thinking, and the small
+          decisions that make software feel good to use.
+        </p>
+        <nav className="social-links" aria-label="Social links">
+          <a href="mailto:joe.pothiboot.dev@gmail.com">Email</a>
+          <a href="https://github.com/joepotibutr" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/joepotibutr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+        <nav className="site-links" aria-label="Site links">
+          <span>Additional links</span>
+          <Link to="/">home</Link>
+          <Link to="/writing">writing</Link>
+        </nav>
+      </div>
     </header>
   );
 };

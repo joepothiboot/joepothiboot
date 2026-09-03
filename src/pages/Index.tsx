@@ -1,13 +1,15 @@
 import { Header } from "@/components/portfolio/Header";
-import { Experience } from "@/components/portfolio/Experience";
+import { Projects } from "@/components/portfolio/Projects";
+import { Blog } from "@/components/portfolio/Blog";
 import { Footer } from "@/components/portfolio/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="site-shell">
       <Header />
-      <main className="py-8">
-        <Experience />
+      <main>
+        <Projects />
+        <Blog />
       </main>
       <Footer />
     </div>

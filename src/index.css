@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,8 +11,8 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Academic Portfolio Theme - Primary: Deep Blues/Navy/Charcoal */
-    --background: 0 0% 98%;
-    --foreground: 210 40% 12%;
+    --background: 42 33% 97%;
+    --foreground: 220 22% 17%;
 
     --card: 0 0% 100%;
     --card-foreground: 210 40% 12%;
@@ -28,10 +30,10 @@ All colors MUST be HSL.
 
     /* Muted backgrounds */
     --muted: 210 15% 95%;
-    --muted-foreground: 215 15% 45%;
+    --muted-foreground: 220 10% 45%;
 
     /* Vibrant cyan accent */
-    --accent: 190 85% 55%;
+    --accent: 12 72% 54%;
     --accent-foreground: 210 40% 12%;
 
     --destructive: 0 70% 50%;
@@ -39,7 +41,9 @@ All colors MUST be HSL.
 
     --border: 210 20% 88%;
     --input: 210 20% 88%;
-    --ring: 190 85% 55%;
+    --ring: 12 72% 54%;
+    --link: 205 70% 36%;
+    --link-hover: 12 72% 45%;
 
     --radius: 0.25rem;
 
@@ -95,12 +99,9 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 16px;
+    margin: 0;
   }
 }
 
-@layer utilities {
-  .container-narrow {
-    @apply max-w-2xl mx-auto px-6;
-  }
-}
