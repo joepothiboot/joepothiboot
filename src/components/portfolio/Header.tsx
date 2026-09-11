@@ -14,7 +14,7 @@ export const Header = () => {
         </p>
         <nav className="social-links" aria-label="Social links">
           <a href="mailto:joe.pothiboot.dev@gmail.com">Email</a>
-          <a href="https://github.com/joepotibutr" target="_blank" rel="noopener noreferrer">GitHub</a>
+           <a href="https://github.com/joepothiboot" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="https://linkedin.com/in/joepotibutr" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </nav>
         <nav className="site-links" aria-label="Site links">

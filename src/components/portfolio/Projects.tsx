@@ -9,7 +9,7 @@ export const Projects = () => {
         <article className="project-item">
           <p className="post-date">Open source / compiler tooling</p>
           <h3>
-            <a href="https://github.com/joepotibutr/vizmlir" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/joepothiboot/vizmlir" target="_blank" rel="noopener noreferrer">
               VizMLIR
             </a>
           </h3>
