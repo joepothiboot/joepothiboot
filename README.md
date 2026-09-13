@@ -1,75 +1,45 @@
-# React + TypeScript + Vite
+# Joe Pothiboot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend engineer with a growing interest in compiler tooling, MLIR, and systems-level software design.
 
-Currently, two official plugins are available:
+I work across product interfaces and low-level technical exploration, with a focus on building clear abstractions, resilient systems, and tooling that makes complex behavior easier to reason about.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Current focus
 
-## React Compiler
+- Frontend engineering with React, TypeScript, and product-minded UX
+- Compiler internals and LLVM/MLIR concepts
+- Building small, interpretive projects that turn abstract systems ideas into concrete, testable implementations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Interesting projects
 
-## Expanding the ESLint configuration
+### LLVM Idioms Workbench
+A hands-on set of modules exploring core LLVM/compilers ideas such as ownership, custom RTTI, and pass-manager-driven AST transformations.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### nano-dsp-mlir
+An out-of-tree MLIR dialect and lowering pipeline for DSP operators including add, relu, matmul, and conv2d. Focused on dialect design, conversion patterns, and optimization pass composition.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### json-schema-mlir
+A custom MLIR dialect for JSON Schema validation that canonicalizes constraints before lowering to standard dialects and then to LLVM IR.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### VizMLIR
+Explorations in visualizing MLIR IR and compiler transformations to make complex intermediate representations easier to inspect and understand.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Not a full transition yet
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+My work is still intentionally mixed: I care deeply about frontend craft and product quality, while also building compiler and systems exploration projects as a long-term direction.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The goal is not a sharp pivot overnight, but a gradual convergence toward more systems-oriented and compiler-adjacent work, while keeping strong product and engineering fundamentals in place.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# dev
-# dev
+## Tech interests
+
+- React / TypeScript
+- UI architecture and component design
+- MLIR / LLVM
+- compiler passes and IR transformations
+- dataflow, transformation pipelines, and optimization thinking
+
+## Contact
+
+- GitHub: [@joepothiboot](https://github.com/joepothiboot)
+- LinkedIn: [Watcharapong Pothiboot](https://www.linkedin.com/in/joepotibutr)
+- Email: joe.pothiboot.dev@gmail.com
