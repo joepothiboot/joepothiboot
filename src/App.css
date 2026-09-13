@@ -32,7 +32,7 @@ a:hover { color: hsl(var(--link-hover)); }
 .social-links a:not(:last-child)::after, .site-links a:not(:last-child)::after { color: hsl(var(--muted-foreground)); content: "·"; margin-left: 0.9rem; text-decoration: none; }
 .site-links { border-top: 1px solid hsl(var(--border)); gap: 0.8rem; margin-top: 2.25rem; padding-top: 1rem; }
 .site-links span { color: hsl(var(--muted-foreground)); margin-right: 0.4rem; }
-.projects-section, .writing-section { border-top: 1px solid hsl(var(--border)); padding: 2.5rem 0; }
+.projects-section { border-top: 1px solid hsl(var(--border)); padding: 2.5rem 0; }
 .section-heading { align-items: baseline; display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1.8rem; }
 .section-heading h2 { font-size: 1rem; font-weight: 600; margin: 0; }
 .section-heading a, .section-note { flex-shrink: 0; }
