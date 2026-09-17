@@ -24,11 +24,11 @@ A custom MLIR dialect for JSON Schema validation that canonicalizes constraints 
 ### VizMLIR
 Explorations in visualizing MLIR IR and compiler transformations to make complex intermediate representations easier to inspect and understand.
 
-## Not a full transition yet
+## Compiler interest
 
-My work is still intentionally mixed: I care deeply about frontend craft and product quality, while also building compiler and systems exploration projects as a long-term direction.
+I care deeply about frontend craft and product quality, and I am interested in compiler internals, systems programming, LLVM, and MLIR.
 
-The goal is not a sharp pivot overnight, but a gradual convergence toward more systems-oriented and compiler-adjacent work, while keeping strong product and engineering fundamentals in place.
+I explore these areas through small, hands-on projects that make compiler design and systems concepts easier to understand.
 
 ## Tech interests
 
