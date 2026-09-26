@@ -12,17 +12,19 @@ I work across product interfaces and low-level technical exploration, with a foc
 
 ## Interesting projects
 
-### LLVM Idioms Workbench
-A hands-on set of modules exploring core LLVM/compilers ideas such as ownership, custom RTTI, and pass-manager-driven AST transformations.
+Explore all four together as one pipeline (source → diagnostics → MLIR → pass inspection → debugging → profiling) in **[compiler-tooling-lab](https://joepothiboot.github.io/compiler-tooling-lab/)**.
 
-### nano-dsp-mlir
-An out-of-tree MLIR dialect and lowering pipeline for DSP operators including add, relu, matmul, and conv2d. Focused on dialect design, conversion patterns, and optimization pass composition.
+### [json-schema-mlir](https://github.com/joepothiboot/json-schema-mlir)
+An out-of-tree MLIR dialect that compiles JSON Schema (Draft 2020-12) documents into native validators specialized to a single schema. Constraints are canonicalized as constraints first (subsumption, conjunction fusion, contradiction detection), then lowered through `arith`/`scf`/`math` to LLVM IR against a small runtime ABI.
 
-### json-schema-mlir
-A custom MLIR dialect for JSON Schema validation that canonicalizes constraints before lowering to standard dialects and then to LLVM IR.
+### [nano-dsp-mlir](https://github.com/joepothiboot/nano-dsp-mlir)
+A small MLIR compiler for a tiny image/math DSL. It has a `dsp` dialect (`add`, `relu`, `matmul`, `conv2d`) with verifiers and canonicalization, plus a lowering to `linalg.generic`. Tests run in three tiers: dialect verification, FileCheck lowering structure, and end-to-end execution via `mlir-runner`.
 
-### VizMLIR
-Explorations in visualizing MLIR IR and compiler transformations to make complex intermediate representations easier to inspect and understand.
+### [VizMLIR](https://github.com/joepothiboot/vizmlir) · [live demo](https://joepothiboot.github.io/vizmlir/)
+A browser-based MLIR visualizer built with React and a Rust/WebAssembly parser. It renders IR as an interactive graph and steps through `-mlir-print-ir-after-all` pass traces with before/after diffs and diagnostics. It runs entirely client-side.
+
+### [mlir-lldb-tools](https://github.com/joepothiboot/mlir-lldb-tools)
+LLDB tooling that lets a debugger speak in ops and SSA values instead of raw memory. It includes commands like `mlir-break-op` and `mlir-show-loc`, pretty-printers for runtime objects, a minimal debug adapter (DAP), and a small VS Code extension. The end-to-end path (toy compiler → generated C++ → LLDB on a live process) is tested in CI.
 
 ## Compiler interest
 
@@ -36,6 +38,7 @@ I explore these areas through small, hands-on projects that make compiler design
 - UI architecture and component design
 - MLIR / LLVM
 - compiler passes and IR transformations
+- debugger tooling (LLDB, DAP)
 - dataflow, transformation pipelines, and optimization thinking
 
 ## Contact
