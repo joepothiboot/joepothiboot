@@ -7,21 +7,16 @@ I work across product interfaces and low-level technical exploration, with a foc
 ## 🎯 Current focus
 
 - Frontend engineering with React, TypeScript, and product-minded UX
-- Compiler internals and LLVM/MLIR concepts
-- Building small, interpretive projects that turn abstract systems ideas into concrete, testable implementations
+- Mojo library design, SIMD kernels, and bit-exact correctness testing
+- Compiler internals, LLVM/MLIR, and hardware-aware optimization
 
 ## 🛠️ Interesting projects
 
-Explore all three together as one pipeline (source → diagnostics → MLIR → pass inspection → profiling) in **[compiler-tooling-lab](https://joepothiboot.github.io/compiler-tooling-lab/)**.
-
-### 📐 [json-schema-mlir](https://github.com/joepothiboot/json-schema-mlir)
-An out-of-tree MLIR dialect that compiles JSON Schema (Draft 2020-12) documents into native validators specialized to a single schema. Constraints are canonicalized as constraints first (subsumption, conjunction fusion, contradiction detection), then lowered through `arith`/`scf`/`math` to LLVM IR against a small runtime ABI.
-
 ### ⚡ [nano-dsp-mlir](https://github.com/joepothiboot/nano-dsp-mlir)
-A small MLIR compiler for a tiny image/math DSL. It has a `dsp` dialect (`add`, `relu`, `matmul`, `conv2d`) with verifiers and canonicalization, plus a lowering to `linalg.generic`. Tests run in three tiers: dialect verification, FileCheck lowering structure, and end-to-end execution via `mlir-runner`.
+A hardware-aware MLIR compiler and Mojo kernel library for DSP operations. The MLIR pipeline lowers a custom dialect through Linalg, then applies target-model-driven tiling and vectorization; the Mojo kernels and C++ reference are checked against shared golden values and differential tests.
 
 ### 🔍 [VizMLIR](https://github.com/joepothiboot/vizmlir) · [live demo](https://joepothiboot.github.io/vizmlir/)
-A browser-based MLIR visualizer built with React and a Rust/WebAssembly parser. It renders IR as an interactive graph and steps through `-mlir-print-ir-after-all` pass traces with before/after diffs and diagnostics. It runs entirely client-side.
+A browser-based visualizer for GPU compiler IR. It explains MLIR and Triton kernels through thread, warp, and memory views, verifies memory-access patterns, and lets you inspect compiler passes and their changes. It runs entirely client-side.
 
 ## ⚙️ Compiler interest
 
