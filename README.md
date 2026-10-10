@@ -1,36 +1,46 @@
 # Joe Pothiboot 👋
 
-Frontend engineer with a growing interest in compiler tooling, MLIR, and systems-level software design.
-
-I work across product interfaces and low-level technical exploration, with a focus on building clear abstractions, resilient systems, and tooling that makes complex behavior easier to reason about.
+I build compilers and kernels for accelerators: MLIR and LLVM pipelines, tiling for CPUs, GPUs and
+scratchpad DSP/NPU machines, and kernels that are checked bit for bit against a reference.
 
 ## 🎯 Current focus
 
-- Frontend engineering with React, TypeScript, and product-minded UX
-- Mojo library design, SIMD kernels, and bit-exact correctness testing
-- Compiler internals, LLVM/MLIR, and hardware-aware optimization
+- MLIR/LLVM compilers: custom dialects, Transform-dialect schedules, lowering to machine code
+- Kernels for CPU SIMD, GPU and scratchpad/DMA accelerators, measured against real ceilings and vendor libraries
+- Correctness first: every optimized kernel must match an unoptimized reference exactly
 
-## 🛠️ Interesting projects
+## 🛠️ Projects
 
-### ⚡ [nano-dsp-mlir](https://github.com/joepothiboot/nano-dsp-mlir)
-A hardware-aware MLIR compiler and Mojo kernel library for DSP operations. The MLIR pipeline lowers a custom dialect through Linalg, then applies target-model-driven tiling and vectorization; the Mojo kernels and C++ reference are checked against shared golden values and differential tests.
+### ⚡ [nano-dsp-mlir](https://github.com/joepothiboot/nano-dsp-mlir) · [demo](https://joepothiboot.github.io/nano-dsp-mlir/)
+
+An out-of-tree MLIR compiler for a small tensor DSL. A `dsp` dialect is lowered through Linalg to LLVM,
+tiled and vectorized by Transform-dialect schedules generated from a hardware target model, for ARM NEON,
+x86 AVX2 and Hexagon HVX. Scheduled code is bit-exact with unscheduled code and a scalar C++ reference.
+A Mojo kernel library implements the same ops on CPU and GPU; its register-blocked matmul reaches
+1.9 TFLOP/s on an NVIDIA T4, 49–58% of cuBLAS from 512³ up.
+
+### 🧮 [mock-npu-bench](https://github.com/joepothiboot/mock-npu-bench)
+
+A cycle-level simulator and assembler in C++17 for MN1, a fictional vector accelerator with a 64 KiB
+scratchpad and an async DMA engine. It traps on DMA hazards and writes Perfetto traces, so double
+buffering and pipeline stalls show up as cycle counts.
 
 ### 🔍 [VizMLIR](https://github.com/joepothiboot/vizmlir) · [live demo](https://joepothiboot.github.io/vizmlir/)
-A browser-based visualizer for GPU compiler IR. It explains MLIR and Triton kernels through thread, warp, and memory views, verifies memory-access patterns, and lets you inspect compiler passes and their changes. It runs entirely client-side.
 
-## ⚙️ Compiler interest
+A browser tool (Rust → WebAssembly) that reads MLIR pass pipelines and analyzes GPU memory access in MLIR
+and Triton IR. Its predictions, written before the run, matched all 22 Nsight Compute counters measured
+on an NVIDIA T4.
 
-I care deeply about frontend craft and product quality, and I am interested in compiler internals, systems programming, LLVM, and MLIR.
+### Also
 
-I explore these areas through small, hands-on projects that make compiler design and systems concepts easier to understand.
+- [device-atlas](https://github.com/joepothiboot/device-atlas): a catalog of CPUs, GPUs, DSPs and NPUs
+  with a planner that tiles the same GEMM for each
+- [compiler-field-guide](https://github.com/joepothiboot/compiler-field-guide): my notes on compiler
+  concepts across LLVM, MLIR, Triton and Mojo
 
-## 💡 Tech interests
+## 🧰 Tools
 
-- React / TypeScript
-- UI architecture and component design
-- MLIR / LLVM
-- compiler passes and IR transformations
-- dataflow, transformation pipelines, and optimization thinking
+C++ · MLIR / LLVM · Mojo · Python · Rust
 
 ## 📫 Contact
 
