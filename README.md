@@ -17,7 +17,8 @@ An out-of-tree MLIR compiler for a small tensor DSL. A `dsp` dialect is lowered 
 tiled and vectorized by Transform-dialect schedules generated from a hardware target model, for ARM NEON,
 x86 AVX2 and Hexagon HVX. Scheduled code is bit-exact with unscheduled code and a scalar C++ reference.
 A Mojo kernel library implements the same ops on CPU and GPU; its register-blocked matmul reaches
-1.9 TFLOP/s on an NVIDIA T4, 49–58% of cuBLAS from 512³ up.
+1.9 TFLOP/s on an NVIDIA T4, 49–58% of cuBLAS from 512³ up. Hand-written CUDA and Triton
+matmuls on the same T4 are profiled with Nsight Compute against cuBLAS.
 
 ### 🧮 [mock-npu-bench](https://github.com/joepothiboot/mock-npu-bench)
 
@@ -40,10 +41,9 @@ on an NVIDIA T4.
 
 ## 🧰 Tools
 
-C++ · MLIR / LLVM · Mojo · Python · Rust
+C++ · MLIR / LLVM · CUDA · Triton · Mojo · Python · Rust
 
 ## 📫 Contact
 
 - GitHub: [@joepothiboot](https://github.com/joepothiboot)
 - LinkedIn: [Watcharapong Pothiboot](https://www.linkedin.com/in/joepotibutr)
-- Email: joe.pothiboot.dev@gmail.com
