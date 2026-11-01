@@ -1,25 +1,25 @@
 export const Projects = () => {
   const projectItems = [
     {
-      category: "Compiler education / LLVM internals",
-      title: "LLVM Idioms Workbench",
-      description:
-        "A hands-on collection of LLVM-style idioms covering AST ownership, custom RTTI, and pass-manager-driven transformations. Each module makes a concrete compiler design choice visible through small, testable demos.",
-      tags: "LLVM · C++ · AST · ownership",
-    },
-    {
-      category: "MLIR / DSP compiler",
+      category: "MLIR / tensor compiler",
       title: "nano-dsp-mlir",
       description:
-        "An out-of-tree MLIR dialect and lowering pipeline for DSP operators such as add, relu, matmul, and conv2d. The project focuses on concise dialect design, conversion to Linalg, and a lightweight optimization toolchain.",
-      tags: "MLIR · DSP · lowering · optimization",
+        "A small tensor compiler. A dsp dialect lowers to linalg.generic and on to LLVM, tiled and vectorized by a Transform-dialect schedule, then checked bit for bit against unscheduled code and a C++ reference.",
+      tags: "MLIR · LLVM · Mojo · C++",
     },
     {
-      category: "Schema tooling / MLIR",
-      title: "json-schema-mlir",
+      category: "Accelerator modeling",
+      title: "mock-npu-bench",
       description:
-        "A custom MLIR dialect for JSON Schema validation that canonicalizes constraints before lowering to standard dialects and eventually LLVM IR. It treats validation as a compiler optimization problem rather than a generic runtime walk.",
-      tags: "MLIR · JSON Schema · validation · lowering",
+        "A cycle-level simulator for a fictional vector accelerator: in-order core, vector unit, scratchpad, and asynchronous DMA, with an assembler and performance profiles.",
+      tags: "simulation · ISA design · performance",
+    },
+    {
+      category: "Compiler tooling",
+      title: "vizmlir",
+      description:
+        "A browser tool for reading mlir-opt pass traces: structural diffs per pass, GPU launch-to-warp mapping, and load/store classification down to PTX. A Rust parser compiled to WebAssembly, no backend.",
+      tags: "MLIR · Rust · WASM · GPU",
     },
   ];
 
