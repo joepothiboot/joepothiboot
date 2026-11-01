@@ -2,7 +2,7 @@ export const Header = () => {
   return (
     <header className="site-header">
       <div className="container-narrow">
-        <p className="site-kicker">Compilers, accelerators, formal verification</p>
+        <p className="site-kicker">Compilers, type systems, formal verification</p>
         <h1>Watcharapong (Joe) Pothiboot</h1>
         <p className="site-role">
           Frontend engineer. Building compilers and proving them correct on
@@ -14,8 +14,8 @@ export const Header = () => {
           <a href="https://joepothiboot.github.io/compiler-research-lab/">
             compiler-research-lab
           </a>
-          : pinned-commit writeups of a small tensor compiler, an
-          accelerator simulator, and a browser-based IR viewer.
+          : dialect design, verified lowering, and constraint-based program
+          analysis, pinned to a commit and run for real.
         </p>
         <nav className="social-links" aria-label="Social links">
           <a href="mailto:joe.pothiboot.dev@gmail.com">Email</a>
