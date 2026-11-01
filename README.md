@@ -4,13 +4,13 @@ compilers and formal verification. C++ and MLIR to build them, Haskell to prove 
 
 
 
-## projects
+## main project
 
-[nano-dsp-mlir](https://github.com/joepothiboot/nano-dsp-mlir) - small tensor compiler, output checked against a reference
+[compiler-research-lab](https://joepothiboot.github.io/compiler-research-lab/) - site with captured results, IR dumps and timings for my compiler work ([repo](https://github.com/joepothiboot/compiler-research-lab))
 
-[mock-npu-bench](https://github.com/joepothiboot/mock-npu-bench) - simulator for a made-up accelerator
-
-[vizmlir](https://github.com/joepothiboot/vizmlir) - browser tool for reading compiler IR
+- nano-dsp-mlir - small tensor compiler, output checked against a reference
+- mock-npu-bench - simulator for a made-up accelerator
+- vizmlir - browser tool for reading compiler IR
 
 ## stack
 
